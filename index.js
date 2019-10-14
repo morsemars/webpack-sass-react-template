@@ -1,10 +1,18 @@
 import React from 'react';
 import { render } from 'react-dom';
 import './src/sass/index.scss';
+import { Router } from '@reach/router';
+
+import Home from './src/js/containers/Home.jsx';
+import Page from './src/js/containers/Page.jsx';
 
 const App = () => {
     return (
-        <h1>HELLO</h1>
+        <Router>
+            <Home path="/"/>
+            <Page path="page"/>
+            <Home default />
+        </Router>
     );
 }
 
